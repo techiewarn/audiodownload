@@ -1,0 +1,28 @@
+To extract the links to audio bible mp3 files from youversion
+
+Step1
+Go here:
+https://www.bible.com/audio-bible/113/JHN.1.NIVUK
+
+Step 2
+Select Bible version, Book and chapter
+
+Step 3
+Create a bookmarklet (with this code)
+javascript:(async function(){try{const bodyHTML=document.body.innerHTML;const match=bodyHTML.match(/https:\/\/audio-bible-cdn\.youversionapi\.com\/[\w\/\-]+\.mp3\?version_id=\d+/);if(match&&match[0]){await navigator.clipboard.writeText(match[0]);}}catch(e){console.error("Error copying audio link:",e);}})();
+
+Then, click on the bookmarklet when you're on your desired bible version, book and chapter.
+After that, you will have copied the link to the clipboard.
+
+Advanced
+You can also create a bookmarklet shortcut
+
+Download this chrome extension
+https://chromewebstore.google.com/detail/bookmark-shortcuts-extens/fncelbkbpljhacojmfbcajibgdkaegjf?hl=en
+
+Then, visit this link:
+chrome://extensions/shortcuts
+You want to move your bookmarklet all the way to one of the first top 10 bookmarks 
+so that you can create a keyboard shortcut for it.
+
+Once you have done that, you can create a keyboard shortcut to activate the bookmarklet.
